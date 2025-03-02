@@ -10,12 +10,22 @@
   --foreground: #171717;
 }
 
+
+/*
+Hex codes:
+
+light green: AFE1AF
+dark green: 097969
+
+
+
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
