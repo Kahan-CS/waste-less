@@ -60,17 +60,17 @@ const NavBar = () => {
         >
           <ul className="flex flex-col lg:flex-row lg:items-center divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
             <li onClick={closeMenu}>
-              <Link href="/programs" className="block py-2 px-4 hover:bg-gray-100 hover:text-[#AFE1AF]">
+              <Link href="/cart" className="block py-2 px-4 hover:bg-gray-100 hover:text-[#AFE1AF]">
                 Cart
               </Link>
             </li>
             <li onClick={closeMenu}>
-              <Link href="/curriculum" className="block py-2 px-4 hover:bg-gray-100 hover:text-[#AFE1AF]">
+              <Link href="/orders" className="block py-2 px-4 hover:bg-gray-100 hover:text-[#AFE1AF]">
                 Orders
               </Link>
             </li>
             <li onClick={closeMenu}>
-              <Link href="/about" className="block py-2 px-4 hover:bg-gray-100 hover:text-[#AFE1AF]">
+              <Link href="/login" className="block py-2 px-4 hover:bg-gray-100 hover:text-[#AFE1AF]">
                 Login/Signup
               </Link>
             </li>
