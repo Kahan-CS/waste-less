@@ -1,15 +1,13 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import Shop from "@/components/Shop";
 import groceriesData from "@/data/groceries.json";
-import cartData from "@/data/cart.json";
-import fs from "fs";
-import path from "path";
 
 interface CartItem {
   id: number;
   quantity: number;
 }
-
 
 interface Grocery {
   id: number;
@@ -25,7 +23,9 @@ export default function Home() {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   useEffect(() => {
-    setCart(cartData);
+    fetch("/api/cart")
+      .then((res) => res.json())
+      .then((data) => setCart(data));
   }, []);
 
   const addToCart = (grocery: Grocery, quantity: number) => {
@@ -39,10 +39,13 @@ export default function Home() {
     }
 
     setCart(updatedCart);
-    fs.writeFileSync(
-      path.join(process.cwd(), "data", "cart.json"),
-      JSON.stringify(updatedCart, null, 2)
-    );
+    fetch("/api/cart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedCart),
+    });
   };
 
   return (
