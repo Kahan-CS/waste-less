@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Rice (5kg)",
+      "price": 10,
+      "image": "/images/rice.png",
+      "current_demand": 5,
+      "expected_wait_time": "3 days",
+      "threshold": 10
+    },
+    {
+      "id": 2,
+      "name": "Water (2 gallons",
+      "price": 5,
+      "image": "/images/water_gallon.png",
+      "current_demand": 8,
+      "expected_wait_time": "6 hours",
+      "threshold": 10
+    }
+  ]
